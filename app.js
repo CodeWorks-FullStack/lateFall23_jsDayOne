@@ -180,8 +180,10 @@ function checkInput() {
         // console.log('they are the same!')
         window.alert("You got the secret code!")
 
+        // NOTE innerText changes text inside of a pre-existing element
         document.getElementById('victoryHeader').innerText = 'YOU ROCK'
 
+        // NOTE innerHTML injects entire elements into the HTML
         document.getElementById('victoryImg').innerHTML = '<img class="img-fluid" src="https://akns-images.eonline.com/eol_images/Entire_Site/2014616/rs_600x600-140716105230-600-the-rock-fanny-pack.ls.71614.jpg?fit=around%7C1200:1200&output-quality=90&crop=1200:1200;center,top" alt="the rock">'
 
     } else {
@@ -191,10 +193,13 @@ function checkInput() {
     clearInput()
 
     // NOTE this is the big brain way
+    // NOTE instead of using an else statement, we may use a return to end the function after checking our condition
+    // NOTE this can be faster in cases where you want to immediately end a function if the condition is false
+
     // if (userInput == secretCode) {
     //     // console.log('they are the same!')
     //     window.alert("You got the secret code!")
-    //     return
+    //     return 
     // }
     // window.alert("You got it wrong stinky HAHA")
 }
