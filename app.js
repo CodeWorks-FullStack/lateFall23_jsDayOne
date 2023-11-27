@@ -150,10 +150,52 @@ function clickEmoji(emoji) {
     console.log('clicking emoji', emoji)
     userInput += emoji
     console.log(userInput, 'updated input')
-    updateDOM
+    updateDOM()
 }
 
 function updateDOM() {
     document.getElementById('userInput').innerText = userInput
+}
+
+function clearInput() {
+    // take the userinput and reset it
+    // assign the value back to its default
+    // update the DOM
+    console.log('CLEAR')
+    console.log(userInput)
+
+    userInput = ''
+    console.log(userInput, 'cleared input')
+    updateDOM()
+}
+
+function checkInput() {
+    // check if userInput matches secret code
+    // if matches, alert the user
+    // if it doesn't match, alert and maybe close the window??
+    debugger
+    console.log('checking input')
+
+    if (userInput == secretCode) {
+        // console.log('they are the same!')
+        window.alert("You got the secret code!")
+
+        document.getElementById('victoryHeader').innerText = 'YOU ROCK'
+
+        document.getElementById('victoryImg').innerHTML = '<img class="img-fluid" src="https://akns-images.eonline.com/eol_images/Entire_Site/2014616/rs_600x600-140716105230-600-the-rock-fanny-pack.ls.71614.jpg?fit=around%7C1200:1200&output-quality=90&crop=1200:1200;center,top" alt="the rock">'
+
+    } else {
+        window.alert("You got it wrong stinky HAHA")
+    }
+
+    clearInput()
+
+    // NOTE this is the big brain way
+    // if (userInput == secretCode) {
+    //     // console.log('they are the same!')
+    //     window.alert("You got the secret code!")
+    //     return
+    // }
+    // window.alert("You got it wrong stinky HAHA")
 }
 

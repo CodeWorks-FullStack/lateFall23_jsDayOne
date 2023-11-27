@@ -35,13 +35,31 @@
 
         <section class="row">
             <div class="col-md-4">
-                <button class="btn btn-outline-info w-100" onclick="clickSnowflake()">❄️</button>
+                <button class="btn btn-outline-info w-100" onclick="clickEmoji('❄️')">❄️</button>
             </div>
             <div class="col-md-4">
-                <button class="btn btn-outline-warning w-100" onclick="clickMenorah()">🕎</button>
+                <button class="btn btn-outline-warning w-100" onclick="clickEmoji('🕎')">🕎</button>
             </div>
             <div class="col-md-4">
                 <button class="btn btn-outline-warning w-100" onclick="clickEmoji('⛸️')">⛸️</button>
+            </div>
+        </section>
+
+        <section class="row pt-2">
+            <div class="col-md-6">
+                <button class="btn btn-danger w-100" onclick="clearInput()">Clear</button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-success w-100" onclick="checkInput()">Submit</button>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col-12">
+                <h3 class="text-center" id="victoryHeader"></h3>
+            </div>
+            <div class="col-12 text-center" id="victoryImg">
+
             </div>
         </section>
 
