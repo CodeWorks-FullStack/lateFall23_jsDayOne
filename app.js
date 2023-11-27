@@ -129,7 +129,31 @@ function clickSnowflake() {
     // userInput = userInput +  '❄️'  this line will do the same as above ^^
     console.log(userInput, 'after adding emoji')
 
-    document.getElementById('userInput').innerText = userInput
-
-
+    // document.getElementById('userInput').innerText = userInput
+    updateDOM()
 }
+
+function clickMenorah() {
+    console.log('menorah')
+    let emoji = '🕎' // this is called aliasing a variable
+    userInput += emoji
+    console.log(userInput)
+
+    // document.getElementById('userInput').innerText = userInput
+    updateDOM()
+}
+
+function clickEmoji(emoji) {
+    // check which emoji we clicked on ✅
+    // after we know the emoji, add it to the userInput
+    // update DOM 
+    console.log('clicking emoji', emoji)
+    userInput += emoji
+    console.log(userInput, 'updated input')
+    updateDOM
+}
+
+function updateDOM() {
+    document.getElementById('userInput').innerText = userInput
+}
+
